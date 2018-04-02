@@ -8,9 +8,9 @@ var usersModel = require('../models/usersModel');
 //*************************************************//
 
 // GET to Add Character page
-router.get('/addcharacter', index);
+router.get('/addtype1', index);
 
-// POST data from 
+// POST data from
 router.post('/record', record_data);
 
 
@@ -22,8 +22,8 @@ function index(req, res, next) {
 	// par1 : a view in the views folder
 	// par2 : data to be used when rendering the view
   res.render(
-  	'users', 
-  	{ title: 'Add Character', 
+  	'type1',
+  	{ title: 'Add Type 1',
   	  users: usersModel
   	}
   	);
@@ -32,7 +32,7 @@ function index(req, res, next) {
 function record_data(req, res, next) {
 	console.log(req.body); // show in the console what the user entered
 	usersModel.push(req.body); // Add the user data to the users_data dataset
-	res.redirect('/users/addcharacter');	// reload the page
+	res.redirect('/type1/addtype1');	// reload the page
 }
 
 // Export the router, required in app.js

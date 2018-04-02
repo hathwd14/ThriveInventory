@@ -12,7 +12,8 @@
   	<!-- This can be turned into a menu easily -->
   	<ul>
   		<li> Home </li>
-  		<li> <a href="/users/addcharacter">Add Name</a> </li>
+  		<li> <a href="/type1/addtype1">Add Type 1</a> </li>
+      <li> <a href="/type2/addtype2">Add Type 2</a> </li>
   	</ul>
     <p></p>
   </body>
