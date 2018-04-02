@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 // Load the data model
-var usersModel = require('../models/usersModel');
+var type1model = require('../models/type1model');
 
 //*************************************************//
 // All of these routes are relative to /users      //
@@ -24,14 +24,14 @@ function index(req, res, next) {
   res.render(
   	'type1',
   	{ title: 'Add Type 1',
-  	  users: usersModel
+  	  type1: type1model
   	}
   	);
 }
 
 function record_data(req, res, next) {
 	console.log(req.body); // show in the console what the user entered
-	usersModel.push(req.body); // Add the user data to the users_data dataset
+	type1model.push(req.body); // Add the user data to the users_data dataset
 	res.redirect('/type1/addtype1');	// reload the page
 }
 

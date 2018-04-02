@@ -15,16 +15,20 @@
   		<br>
  	 	Last name:<br>
  	 	<input type="text" name="lastname" value="">
- 	 	<br><br>
+ 	 	<br>
+    Wake ID: <br>
+    <input type="text" name="wakeID" value="">
+    <br>
+    <br>
  	 	<input type="submit" value="Submit">
 	</form>
 
 	<div>
 	<h1>Current List</h1>
 	 <ul>
-	 {{#users}}   <!-- Iterate over the array in users variable -->
-	 	<li>{{name}} {{lastname}}</li>  <!-- fields in the array entry -->
-	 {{/users}}	<!-- end of loop -->
+	 {{#type2}}   <!-- Iterate over the array in users variable -->
+	 	<li>{{name}} {{lastname}} {{wakeID}}</li>  <!-- fields in the array entry -->
+	 {{/type2}}	<!-- end of loop -->
 	</ul>
 	</div>
 
