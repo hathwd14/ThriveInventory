@@ -11,8 +11,11 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
-        width: 100%;
+        width: 80%;
         background-color: #f1f1f1;
+        border: 1px solid #555;
+        font-family: "Times New Roman";
+        font-size: 22px;
     }
 
     li a {
@@ -21,23 +24,33 @@
         padding: 8px 16px;
         text-decoration: none;
         text-align: center;
+        border-bottom: 1px solid #555;
+        font-family: "Times New Roman";
+        font-size: 16px;
     }
+
 
     /* Change the link color on hover */
     li a:hover {
         background-color: #555;
         color: white;
     }
+
+    h2{
+      font-size: 35px;
+      font-family: "Times New Roman";
+    }
     </style>
 
   </head>
   <body style="background-color:gold;">
-  	<h1> <center> {{ title }} </center> </h1>
-
+    <center>
+  	<h1><img src="http://wp-cdn.aws.wfu.edu/wp-content/uploads/sites/197/2017/09/07103201/Thrive_Horz.png" alt="Thrive" width=40% height=auto></h1>
+    <h2> {{ title }} </h2>
+  </center>
   	<!-- This can be turned into a menu easily -->
     <center>
   	<ul>
-  		<li> Home </li>
   		<li> <a href="/type1/addtype1">Add Type 1</a> </li>
       <li> <a href="/type2/addtype2">Add Type 2</a> </li>
   	</ul>
