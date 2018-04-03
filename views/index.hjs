@@ -5,16 +5,43 @@
   		rendering this page -->
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #f1f1f1;
+    }
+
+    li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    /* Change the link color on hover */
+    li a:hover {
+        background-color: #555;
+        color: white;
+    }
+    </style>
+
   </head>
-  <body>
-  	<h1>{{ title }}</h1>
+  <body style="background-color:gold;">
+  	<h1> <center> {{ title }} </center> </h1>
 
   	<!-- This can be turned into a menu easily -->
+    <center>
   	<ul>
   		<li> Home </li>
   		<li> <a href="/type1/addtype1">Add Type 1</a> </li>
       <li> <a href="/type2/addtype2">Add Type 2</a> </li>
   	</ul>
+  </center>
     <p></p>
   </body>
 </html>
