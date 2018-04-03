@@ -9,6 +9,8 @@
   "dependencies": {
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
+    "datatables.net": "^1.10.16",
+    "datatables.net-dt": "^1.10.16",
     "debug": "~2.6.9",
     "express": "~4.15.5",
     "hjs": "~0.0.6",

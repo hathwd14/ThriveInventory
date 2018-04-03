@@ -7,7 +7,7 @@ router.get('/', sam);
 
 function sam(req, res, next) {
 	res.render('index',
-		{title: "Best Movie Characters of all Time"});
+		{title: "Inventory Types"});
 }
 
 module.exports = router;
