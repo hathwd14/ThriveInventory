@@ -12,24 +12,27 @@
 
   </head>
   <body>
-    <h1>Add Type 1 Inventory</h1>
+    <h1>Add Inventory Item</h1>
 
     <form action="/type1/record" method="post">
-  		First name:<br>
-  		<input type="text" name="name" value="">
+  		Item ID:<br>
+  		<input type="text" name="Item ID" value="">
   		<br>
- 	 	Last name:<br>
- 	 	<input type="text" name="lastname" value="">
+ 	 	Item Name:<br>
+ 	 	<input type="text" name="Item Name" value="">
  	 	<br>
-    Wake ID: <br>
-    <input type="text" name="wakeID" value="">
+    Quantity: <br>
+    <input type="text" name="Quantity" value="">
+    <br>
+    Description: <br>
+    <input type="text" name="Description" value="">
     <br>
     <br>
- 	 	<input type="submit" value="Submit">
+ 	 	<input type="submit" value="Add Row">
 	</form>
 
 	<div>
-	<h1>Current List</h1>
+	<h1>Inventory</h1>
 	 <ul>
 	 {{#type1}}   <!-- Iterate over the array in users variable -->
 	 	<li>{{name}} {{lastname}} {{wakeID}}</li>  <!-- fields in the array entry -->
@@ -39,18 +42,25 @@
   <table id="data-table" class="table">
     <thead>
       <tr>
-        <th scope="col">Name?</th>
-        <th scope="col">Another header value</th>
+        <th scope="col">Item ID</th>
+        <th scope="col">Item Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Item Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td scope="row">Something</td>
-        <td scope="row">Something else</td>
+        <td scope="row">1</td>
+        <td scope="row">Tent</td>
+        <td scope="row">3</td>
+        <td scope="row">Large Red Tent (20' x 20')</td>
+
       </tr>
       <tr>
-        <td scope="row">some value</td>
-        <td scope="row">some other value</td>
+        <td scope="row">2</td>
+        <td scope="row">Pen</td>
+        <td scope="row">2000</td>
+        <td scope="row">Leftover Thrive Giveaway Pens </td>
       </tr>
     </tbody>
   </table>
