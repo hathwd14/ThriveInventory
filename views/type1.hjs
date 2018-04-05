@@ -5,6 +5,11 @@
   		rendering this page -->
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' />
+    <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+    <script src="/javascript/editable-table.js"></script>
+    <script src="/javascript/table-to-json.js"></script>
+
   </head>
   <body>
     <h1>Add Type 1 Inventory</h1>
@@ -31,10 +36,35 @@
 	 {{/type1}}	<!-- end of loop -->
 	</ul>
 	</div>
+  <table id="data-table" class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name?</th>
+        <th scope="col">Another header value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">Something</td>
+        <td scope="row">Something else</td>
+      </tr>
+      <tr>
+        <td scope="row">some value</td>
+        <td scope="row">some other value</td>
+      </tr>
+    </tbody>
+  </table>
 
   <div>
     <a href="/">Back to main page</a>
   </div>
     <p></p>
+    <script>
+      $('#data-table').editableTableWidget();
+      $('table td').on('change', function(evt, newValue) {
+        console.log('change', $('#data-table').tableToJSON());
+        $.post( "/data", { data: $('#data-table').tableToJSON() });
+      });
+    </script>
   </body>
 </html>
